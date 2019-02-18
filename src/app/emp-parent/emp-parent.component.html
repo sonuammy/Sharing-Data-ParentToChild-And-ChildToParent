@@ -1,0 +1,21 @@
+<div><h3>Parent Component</h3>
+  <table border="2px solid black">
+      <tr *ngFor = "let emp of employees">
+          <td width ="50%">
+              {{emp}}
+          </td>
+          <td width ="50%">
+              <button class="btn btn-primary" (click)="setName(emp)">
+                  Send to child
+              </button>
+          </td>
+      </tr>
+  </table>
+  <br>
+  <p>{{childCurrentVal}}</p>
+  -----------------------------------------------------
+  <!-- <app-emp-child [name]="Name"></app-emp-child> -->
+  <app-emp-child [childname]="Name" (outputToParent)="getOutputVal($event)"></app-emp-child>
+  <!-- <app-emp-child [setChildName]="Name"></app-emp-child> -->
+  -----------------------------------------------------
+</div>
