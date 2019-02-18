@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  message: string = 'Data Binding';
+  message: string = 'Sharing Data From Parent to child & Child to Parent';
 
   
 
